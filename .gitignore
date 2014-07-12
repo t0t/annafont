@@ -1,5 +1,8 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 node_modules
+client_inputs
 .sass-cache
 assets/css/main.min.css.map
+assets/bower_components
+assets/bower_components/*
