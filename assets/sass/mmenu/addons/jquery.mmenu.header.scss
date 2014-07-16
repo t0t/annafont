@@ -7,7 +7,7 @@
 
 .mm-header
 {
-	@include mm_vendor-prefix( "box-sizing", border-box );
+	@include vendor( "box-sizing", border-box );
 
 	background: inherit;
 	border-bottom: 1px solid transparent;
@@ -34,7 +34,7 @@
 	.mm-prev,
 	.mm-next
 	{
-		@include mm_vendor-prefix( 'box-sizing', border-box );
+		@include vendor( 'box-sizing', border-box );
 
 		text-decoration: none;
 		display: block;

@@ -37,7 +37,7 @@ body
 	position: relative !important;
 	z-index: 1;
 
-	@include mm_vendor-prefix( "box-sizing", border-box );
+	@include vendor( "box-sizing", border-box );
 }
 .mm-menu
 {

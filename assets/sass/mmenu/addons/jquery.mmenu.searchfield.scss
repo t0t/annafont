@@ -7,7 +7,7 @@
 .mm-search,
 .mm-search input
 {
-	@include mm_vendor-prefix( "box-sizing", border-box );
+	@include vendor( "box-sizing", border-box );
 }
 .mm-list 
 {

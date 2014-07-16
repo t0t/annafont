@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed',
+          style: 'nested',//compressed, compact...
           compass: false,
           // Source maps are available, but require Sass 3.3.0 to be installed
           // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
@@ -36,7 +36,6 @@ module.exports = function(grunt) {
           'assets/js/scripts.min.js': [
             // 'assets/js/plugins/bootstrap/transition.js',
             // 'assets/js/bower_components/lightbox2/js/lightbox.min.js',
-            // 'assets/js/plugins/imagelightbox.js',
             'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]

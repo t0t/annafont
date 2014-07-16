@@ -29,27 +29,67 @@ var Roots = {
 
 
 
-   $(document).ready(function() {
       $("#my-menu").mmenu();
-      $("#my-menu").trigger("open.mm");
+      // $("#my-menu").trigger("open.mm");
       $("#my-button").click(function(e) {
          $("#my-menu").trigger("open.mm");
          e.preventDefault();
       });
-   });
 
-    var go = true;
-          $(window).scroll(function() {
-            if ($(this).scrollTop() > 70 && go) {
-              $(".banner").css('height', '65px');
-              go = false;
-              $(".banner").addClass('navbar');
-            } else if ($(this).scrollTop() < 70 && !go) {
-              // $(".banner").css('height', '41px');
-              go = true;
-              $(".banner").removeClass('navbar');
-            }
-          });
+
+      // Initialize the Lightbox for any links with the 'fancybox' class
+    // $(".thumbnail").fancybox();
+ 
+    // Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif
+    $("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox(
+      {
+      // beforeShow : function(){
+      // this.title =  $(this.element).data("caption");
+      // }
+        padding : 50,
+        openEffect  : 'elastic'
+      }
+    );
+    $("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox({
+    beforeLoad : function() {
+        // this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+        this.title = $(this.element).find('img').attr('alt');
+        /*
+            "this.element" refers to current element, so you can, for example, use the "alt" attribute of the image to store the title:
+            this.title = $(this.element).find('img').attr('alt');
+        */
+    }
+});
+ 
+    // Initialize the Lightbox and add rel="gallery" to all gallery images when the gallery is set up using [gallery link="file"] so that a Lightbox Gallery exists
+    // $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();
+ 
+    // Initalize the Lightbox for any links with the 'video' class and provide improved video embed support
+    // $(".video").fancybox({
+    //     maxWidth        : 800,
+    //     maxHeight       : 600,
+    //     fitToView       : false,
+    //     width           : '70%',
+    //     height          : '70%',
+    //     autoSize        : false,
+    //     closeClick      : false,
+    //     openEffect      : 'none',
+    //     closeEffect     : 'none'
+    // });
+
+
+    // var go = true;
+    //       $(window).scroll(function() {
+    //         if ($(this).scrollTop() > 70 && go) {
+    //           $(".banner").css('height', '65px');
+    //           go = false;
+    //           $(".banner").addClass('navbar');
+    //         } else if ($(this).scrollTop() < 70 && !go) {
+    //           // $(".banner").css('height', '41px');
+    //           go = true;
+    //           $(".banner").removeClass('navbar');
+    //         }
+    //       });
 
 
 

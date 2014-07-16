@@ -46,15 +46,7 @@ $mm_toggleCheckedColor: #4bd963 !default;
 @import "borders";
 
 
-//	Misc mixins
-@mixin mm_vendor-prefix( $prop, $val )
-{
-	-webkit-#{$prop}: $val;
-	-moz-#{$prop}: $val;
-	-ms-#{$prop}: $val;
-	-o-#{$prop}: $val;
-	#{$prop}: $val;
-}
+
 @mixin mm_ellipsis
 {
 	text-overflow: ellipsis;

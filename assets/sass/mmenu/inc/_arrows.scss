@@ -9,7 +9,7 @@
 	position: absolute;
 	bottom: 50%;
 	
-	@include mm_vendor-prefix( "transform", rotate( -45deg ) );
+	@include vendor( "transform", rotate( -45deg ) );
 }
 @mixin mm_arrow-prev
 {
