@@ -30,8 +30,8 @@
             <?php include roots_sidebar_path(); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
-      <?php edit_post_link(); ?>
       </div><!-- /.content -->
+      <?php edit_post_link(); ?>
     </div><!-- /.wrap -->
   
     <?php get_template_part('templates/footer'); ?></div>

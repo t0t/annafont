@@ -3,7 +3,7 @@
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
    ========================================================================== */
 .aligncenter { display: block; margin: 0 auto; }
-.alignleft { float: left; margin-right: $gutterwidth; }
+.alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
@@ -35,7 +35,6 @@ nav {
 	}
 }
 body {
-	// @extend %text-center;
 	font-family: $basefont;
 	color: $color-base;
 	.sidebar {
@@ -145,9 +144,12 @@ body {
 }
 .main {
 	float: left;
-	@include max-width (75%);
+	@include max-width (70%);
 	@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
   		@include max-width (100%);
+  	}
+  	img, p img {
+		margin-right: $gutterwidth * 1.8;
   	}
 }
 #my-button, .idioma-mobiles {
