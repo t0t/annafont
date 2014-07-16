@@ -1,91 +1,30 @@
-/*!
- * Roots 6.5.2
- */
-
 $bootstrap-sass-asset-helper: false;
-@import "bootstrap/bootstrap";
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
+// $media-queries-supported : true;
 
-body { }
+// @import "contenido.scss";
+@import "lib/variables.scss";
+@import "lib/mixins.scss";
+@import "lib/placeholders.scss";
+@import "componentes/reset.scss";
+@import "componentes/fuentes.scss";
+@import "componentes/links.scss";
+// @import "componentes/tablas.scss";
+@import "componentes/botones.scss";
+@import "componentes/elementos.scss";
+@import "componentes/tipografia.scss";
+@import "componentes/navegacion.scss";
+// @import "componentes/paginacion.scss";
+// @import "componentes/formularios.scss";
+// @import "componentes/texturas.scss";
+@import "layout/breakpoints.scss";
 
-
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-
-.banner { }
-
-
-
-/* ==========================================================================
-   Content
-   ========================================================================== */
-
-.content { }
-
-
-
-/* ==========================================================================
-   Primary Content
-   ========================================================================== */
-
-.main { }
-
-/* Gallery Shortcode */
-.gallery-row { padding: 15px 0; }
+@import "t0t.scss";
+// @import "../bower_components/lightbox2/css/lightbox.css";
+@import "mmenu/jquery.mmenu.all.scss";
 
 
-
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
-
-.sidebar { }
-
-
-
-/* ==========================================================================
-   Posts
-   ========================================================================== */
-
-.hentry header { }
-.hentry time { }
-.hentry .byline { }
-.hentry .entry-content { }
-.hentry footer { }
-
-
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-.content-info { }
-
-
-
-/* ==========================================================================
-   WordPress Generated Classes
-   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-   ========================================================================== */
-
-.aligncenter { display: block; margin: 0 auto; }
-.alignleft { float: left; }
-.alignright { float: right; }
-figure.alignnone { margin-left: 0; margin-right: 0; }
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media (min-width: $screen-sm-min) { }
-
-@media (min-width: $screen-md-min) { }
-
-@media (min-width: $screen-lg-min) { }
+// @import "debug.scss";  // Utilizado para comprobar que el marcado HTML no contenga errores

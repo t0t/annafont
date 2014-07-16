@@ -23,6 +23,38 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+
+      // $('[rel="lightbox"]').lightbox();
+      // $('img').lightbox();
+
+
+
+   $(document).ready(function() {
+      $("#my-menu").mmenu();
+      $("#my-menu").trigger("open.mm");
+      $("#my-button").click(function(e) {
+         $("#my-menu").trigger("open.mm");
+         e.preventDefault();
+      });
+   });
+
+    var go = true;
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 70 && go) {
+              $(".banner").css('height', '65px');
+              go = false;
+              $(".banner").addClass('navbar');
+            } else if ($(this).scrollTop() < 70 && !go) {
+              // $(".banner").css('height', '41px');
+              go = true;
+              $(".banner").removeClass('navbar');
+            }
+          });
+
+
+
+
+
     }
   },
   // Home page

@@ -1,0 +1,187 @@
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+@mixin breakpoint($size) {
+	@media only screen and (max-width: $size) { @content; }
+}
+
+@mixin fontFace($family,$src,$weight: normal,$style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.woff') format('woff'), // standards
+      url('#{$src}.ttf') format('truetype'); // Safari, Android, iOS
+      // url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin font-size($font-size: 19){
+    font-size:($font-size)*1px;
+    font-size:($font-size / $basefontsize)*1rem;
+}
+
+@mixin max-width($max-width : $pagemaxwitdh)  {
+	margin-left:auto;
+	margin-right:auto;
+	max-width: $max-width;
+	width:100%;
+}
+
+// .box-sizing(VALUE); (border-box, padding-box, content-box)
+@mixin box-sizing($boxsize: border-box) {
+	-webkit-box-sizing : $boxsize;
+	-moz-box-sizing : $boxsize;
+	-ms-box-sizing : $boxsize;
+	box-sizing : $boxsize;
+}
+
+
+@mixin padding-vertical($padding: $gutterwidth) {
+  padding: $padding 0;
+}
+
+@mixin padding($padding: $gutterwidth) {
+	padding: $padding;
+}
+@mixin padding-bottom($padding: $gutterwidth) {
+  padding-bottom: $padding;
+}
+@mixin margin-bottom($margin: $gutterwidth) {
+  margin-bottom: $margin;
+}
+
+@mixin padding-horizontal($padding: $gutterwidth) {
+  padding: 0 $padding;
+}
+
+//ohh la la grid coooool!!!
+// http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
+@mixin rejilla($numPerRow) {
+  width: ((100% - (($numPerRow - 1) * $gutterwidth)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $gutterwidth;
+    margin-right: $gutterwidth;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  float: left;
+  // border: 1px solid black;
+}
+// @mixin rejilla($numPerRow, $margin) {
+//   width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+//   &:nth-child(n) {
+//     margin-bottom: $margin;
+//     margin-right: $margin;
+//   }
+//   &:nth-child(#{$numPerRow}n) {
+//     margin-right: 0;
+//     margin-bottom: 0;
+//   }
+//   float: left;
+//   // border: 1px solid black;
+// }
+
+// .opacity(VALUE);
+@mixin opacity($opacity : .5) {
+  -webkit-opacity : $opacity;
+  -moz-opacity : $opacity;
+  opacity : $opacity;
+}
+
+// animaciones
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  } 
+  @keyframes $animation-name {
+    @content;
+  }
+}
+@mixin transition($seconds) {
+    -webkit-transition: all $seconds;
+    -moz-transition: all $seconds;
+    -ms-transition: all $seconds;
+    transition: all $seconds;
+}
+
+@mixin animacion($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  animation: #{$str};      
+}
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+      -ms-transform: scale($ratio); // IE9+
+          transform: scale($ratio);
+}
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y); // IE9+
+          transform: translate($x, $y);
+}
+@mixin skew($x, $y) {
+  -webkit-transform: skew($x, $y);
+      -ms-transform: skewX($x) skewY($y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+          transform: skew($x, $y);
+}
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+          transform: translate3d($x, $y, $z);
+}
+
+@mixin rotateX($degrees) {
+  -webkit-transform: rotateX($degrees);
+      -ms-transform: rotateX($degrees); // IE9+
+          transform: rotateX($degrees);
+}
+@mixin rotateY($degrees) {
+  -webkit-transform: rotateY($degrees);
+      -ms-transform: rotateY($degrees); // IE9+
+          transform: rotateY($degrees);
+}
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees); // IE9+
+          transform: rotate($degrees);
+}
+
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+
+//
+//Creamos prefijos para todo dios
+//
+//   `@include vendor(border-radius, 4px);`
+//
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}

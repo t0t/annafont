@@ -9,21 +9,23 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
-        '!assets/js/scripts.min.js'
+        '!assets/js/scripts.min.js',
+        '!assets/js/plugins/jquery.mmenu.min.all.js'
       ]
     },
     sass: {
       dist: {
         options: {
           style: 'compressed',
-          compass: true,
+          compass: false,
           // Source maps are available, but require Sass 3.3.0 to be installed
           // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
-          sourcemap: false
+          sourcemap: true
         },
         files: {
           'assets/css/main.min.css': [
             'assets/sass/app.scss'
+            // 'assets/sass/mmenu/jquery.mmenu.all.scss'
           ]
         }
       }
@@ -32,26 +34,17 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'assets/js/scripts.min.js': [
-            'assets/js/plugins/bootstrap/transition.js',
-            'assets/js/plugins/bootstrap/alert.js',
-            'assets/js/plugins/bootstrap/button.js',
-            'assets/js/plugins/bootstrap/carousel.js',
-            'assets/js/plugins/bootstrap/collapse.js',
-            'assets/js/plugins/bootstrap/dropdown.js',
-            'assets/js/plugins/bootstrap/modal.js',
-            'assets/js/plugins/bootstrap/tooltip.js',
-            'assets/js/plugins/bootstrap/popover.js',
-            'assets/js/plugins/bootstrap/scrollspy.js',
-            'assets/js/plugins/bootstrap/tab.js',
-            'assets/js/plugins/bootstrap/affix.js',
+            // 'assets/js/plugins/bootstrap/transition.js',
+            // 'assets/js/bower_components/lightbox2/js/lightbox.min.js',
+            // 'assets/js/plugins/imagelightbox.js',
             'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]
         },
         options: {
           // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
-          // sourceMap: 'assets/js/scripts.min.js.map',
-          // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+          sourceMap: 'assets/js/scripts.min.js.map',
+          sourceMappingURL: '/wp-content/themes/annafont/assets/js/scripts.min.js.map'
         }
       }
     },
@@ -68,7 +61,10 @@ module.exports = function(grunt) {
       sass: {
         files: [
           'assets/sass/*.scss',
-          'assets/sass/bootstrap/*.scss'
+          'assets/sass/mmenu/jquery.mmenu.all.scss',
+          'assets/sass/mmenu/jquery.mmenu.oncanvas.scsss',
+          'assets/sass/mmenu/inc/_*.scss'
+          // 'assets/sass/bootstrap/*.scss'
         ],
         tasks: ['sass', 'version']
       },
@@ -82,7 +78,7 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
           'assets/css/main.min.css',
