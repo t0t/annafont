@@ -29,6 +29,7 @@
    	padding-right:1em;
    	padding-left: 1em;
 	// border-radius: $radius;
+	@include transition(.2s);
 
 	/**
  	* Nadie quiere un botón con texto subrayado cuando
@@ -37,6 +38,7 @@
 
 	&:hover {
 		text-decoration : none;
+		@include transition(.2s);
 	}
 	&:active,
     &:focus{
@@ -77,11 +79,11 @@ input[type="submit"].btn:hover {
 .btn--slidemenu {
 	@include square(50px);
 		border-radius 		: $radius;
-		color 			: rgba(0,0,0,0.5);
+		color 			: rgba(0,0,0,0.3);
 		background-color 	: $color-base-invert;
 	
 	&:hover {
-		color 			: lighten($color-base, 20%);
+		color 			: $color-base-invert;
 		background-color	: $color-base;
 	}
 	&:visited {

@@ -7,7 +7,7 @@
 	<?php } ?>
 
 	<div id="my-button">
-		<a href="#" class="btn btn--slidemenu">
+		<a href="#" class="btn btn--slidemenu alignleft">
 			<i class="icon-collapse"></i>
 		</a>
 	</div>
