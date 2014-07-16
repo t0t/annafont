@@ -5,7 +5,7 @@ $mm_transitionFunction: ease !default;
 //	Sizes
 $mm_width: 0.8 !default;
 $mm_minWidth: 140px !default;
-$mm_maxWidth: 250px !default;
+$mm_maxWidth: #{$gutterwidth}px !default;
 
 $mm_height: 0.8 !default;
 $mm_minHeight: 140px !default;
