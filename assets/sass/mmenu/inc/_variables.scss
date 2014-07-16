@@ -5,15 +5,15 @@ $mm_transitionFunction: ease !default;
 //	Sizes
 $mm_width: 0.8 !default;
 $mm_minWidth: 140px !default;
-$mm_maxWidth: #{$gutterwidth}px !default;
+$mm_maxWidth: ($paddingbase * 13) !default;
 
 $mm_height: 0.8 !default;
 $mm_minHeight: 140px !default;
 $mm_maxHeight: 880px !default;
 
-$mm_btnSize: 45px !default;
-$mm_padding: 10px !default;
-$mm_fontSize: 14px !default;
+$mm_btnSize: $paddingbase !default;
+$mm_padding: $paddingbase !default;
+$mm_fontSize: #{$basefontsize}px !default;
 
 //	Addon sizes
 $mm_subpanelOffset: 40% !default;
@@ -27,13 +27,13 @@ $mm_searchHeight: $mm_btnSize + $mm_padding !default;
 $mm_searchfieldHeight: $mm_searchHeight - ( $mm_padding * 2 ) !default;
 
 //	Colors
-$mm_baseBg: #333 !default;
-$mm_pageShadow: 0 0 20px rgba( 0, 0, 0, 0.5 ) !default;
-$mm_color: rgba( 255, 255, 255, 0.6 ) !default;
-$mm_dimmedColor: rgba( 255, 255, 255, 0.3 ) !default;
-$mm_emphasizedBg: rgba( 0, 0, 0, 0.1 ) !default;
+$mm_baseBg: invert($color-base) !default;
+$mm_pageShadow: 0 0 20px rgba( 0, 0, 0, 0.9 ) !default;
+$mm_color: $color-base !default;
+$mm_dimmedColor: rgba( 255, 255, 255, 0.05 ) !default;
+$mm_emphasizedBg: rgba( 0, 0, 0, 0.05 ) !default;
 $mm_highlightedBg: rgba( 255, 255, 255, 0.05 ) !default;
-$mm_borderColor: rgba( 0, 0, 0, 0.15 ) !default;
+$mm_borderColor: rgba( 0, 0, 0, 0.08 ) !default;
 
 //	Addon colors
 $mm_toggleCheckedColor: #4bd963 !default;

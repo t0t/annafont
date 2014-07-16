@@ -20,6 +20,7 @@ $retina-suffix: '@2x';
 $baselineheight :     2em;
 $baseline :           $baselineheight;
 $gutterwidth :        3%;
+$paddingbase : 	20px;
 $pagemaxwitdh :       100%;
 $radius :             50%;
 $hovertransition :    .3s;
@@ -54,7 +55,7 @@ $baseletterspacing : 1px;
 /**
  * Brand stuff
  */
-$color-base      	: rgb(41,0,164); //azul annafont
+$color-base      	: rgb(43,0,170); //azul annafont
 // $color-base      : rgb(7,255,218); //aqua
 $color-base-light	: lighten($color-base, 30%);
 $color-dos      	: darken(rgb(41,0,164), 8%);
