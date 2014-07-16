@@ -34,7 +34,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-facebook, .icon-facebook2, .icon-close, .icon-flickr, .icon-linkedin, .icon-twitter, .icon-logo-mazizo, .icon-logo {
+.icon-facebook, .icon-collapse, .icon-facebook2, .icon-close, .icon-flickr, .icon-linkedin, .icon-twitter, .icon-logo-mazizo, .icon-logo {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -46,48 +46,39 @@ you can use the generic selector below, but it's slower:
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-close:before {
+.icon-collapse:before {
+	content: "\e600";
+}
+.icon-cross-circle:before {
 	content: "\e601";
 }
-.icon-facebook:before {
+.icon-delete:before {
 	content: "\e602";
 }
-.icon-facebook2:before {
+.icon-facebook:before {
 	content: "\e603";
 }
-.icon-flickr:before {
+.icon-link:before {
 	content: "\e604";
 }
-.icon-git:before {
+.icon-linkedin:before {
 	content: "\e605";
 }
-.icon-github:before {
+.icon-logo-mazizo:before {
 	content: "\e606";
 }
-.icon-happy:before {
+.icon-logo:before {
 	content: "\e607";
 }
-.icon-link:before {
+.icon-mail:before {
 	content: "\e608";
 }
-.icon-linkedin:before {
+.icon-tick:before {
 	content: "\e609";
 }
-.icon-logo-mazizo:before {
+.icon-twitter:before {
 	content: "\e60a";
 }
-.icon-logo:before {
-	content: "\e60b";
-}
-.icon-mail:before {
-	content: "\e60c";
-}
-.icon-twitter:before {
-	content: "\e60d";
-}
-.icon-wordpress:before {
-	content: "\e60e";
-}
 .icon-youtube:before {
-	content: "\e60f";
+	content: "\e60b";
 }

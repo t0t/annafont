@@ -28,7 +28,7 @@
    	padding-bottom:0;
    	padding-right:1em;
    	padding-left: 1em;
-	border-radius: $radius;
+	// border-radius: $radius;
 
 	/**
  	* Nadie quiere un botón con texto subrayado cuando
@@ -72,17 +72,20 @@ input[type="submit"].btn:hover {
 	cursor : default;
 }
 
-/**
-* Botón de Error
-*/
-.btn--error {
-	background-color: $color-error;
-	color : darken($color-error, 40%);
+
+// Botón desplegable
+.btn--slidemenu {
+	@include square(50px);
+		border-radius 		: $radius;
+		color 			: rgba(0,0,0,0.5);
+		background-color 	: $color-base-invert;
+	
 	&:hover {
-		color : lighten($color-error, 40%);
+		color 			: lighten($color-base, 20%);
+		background-color	: $color-base;
 	}
 	&:visited {
-		color : darken($color-error, 40%);
+		color 			: $color-base;
 	}
 }
 
@@ -100,7 +103,16 @@ input[type="submit"].btn:hover {
 	}
 }
 
-
+.btn--error {
+	background-color: $color-error;
+	color : darken($color-error, 40%);
+	&:hover {
+		color : lighten($color-error, 40%);
+	}
+	&:visited {
+		color : darken($color-error, 40%);
+	}
+}
 
 /**
 * Botón principal
@@ -163,10 +175,6 @@ input[type="submit"].btn:hover {
 /*------------------------------------*\
     $BOTONES-TAMAÑOS
 \*------------------------------------*/
-/**
- * Variantes de los botones por tamaño.
- *
- */
 
 .btn--mini{
     padding-right:0.5em;

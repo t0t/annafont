@@ -3,10 +3,21 @@
     $MIXINS
 \*------------------------------------*/
 
+// breackpoints
 @mixin breakpoint($size) {
 	@media only screen and (max-width: $size) { @content; }
 }
 
+// tamaños cajas
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+// fuente
 @mixin fontFace($family,$src,$weight: normal,$style: normal) {
   @font-face {
     font-family: $family;
@@ -20,6 +31,7 @@
   }
 }
 
+// tamaño fuente
 @mixin font-size($font-size: 19){
     font-size:($font-size)*1px;
     font-size:($font-size / $basefontsize)*1rem;

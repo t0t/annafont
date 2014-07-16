@@ -6,7 +6,11 @@
     	</div>
 	<?php } ?>
 
-	<button id="my-button" href="#">Menu</button>
+	<div id="my-button">
+		<a href="#" class="btn btn--slidemenu">
+			<i class="icon-collapse"></i>
+		</a>
+	</div>
 
 	<a class="brand" href="<?php echo home_url('/') ?>">
   		<h1><?php bloginfo('name'); ?></h1>
