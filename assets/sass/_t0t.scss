@@ -120,7 +120,7 @@ body {
 			background-image: url(#{$image-path}/bg-dibujos.png);
 		}
 	}
-	&.estampados, &.estampats { 
+	&.estampados, &.estampats, &.painting-designs { 
 		background-image: url(#{$image-path}/bg-estampados.jpg); 
 		.sidebar {
 			background-image: url(#{$image-path}/bg-estampados.png);
