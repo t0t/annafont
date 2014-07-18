@@ -40,27 +40,8 @@ var Roots = {
       // Initialize the Lightbox for any links with the 'fancybox' class
     // $(".thumbnail").fancybox();
  
-    // Initialize the Lightbox automatically for any links to images with extensions .jpg, .jpeg, .png or .gif
-    $("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox(
-      {
-      // beforeShow : function(){
-      // this.title =  $(this.element).data("caption");
-      // }
-        padding : 50,
-        openEffect  : 'elastic'
-      }
-    );
 
-    $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox({
-    beforeLoad : function() {
-        // this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
-        this.title = $(this.element).find('img').attr('alt');
-        /*
-            "this.element" refers to current element, so you can, for example, use the "alt" attribute of the image to store the title:
-            this.title = $(this.element).find('img').attr('alt');
-        */
-    }
-});
+    $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();
  
     // Initialize the Lightbox and add rel="gallery" to all gallery images when the gallery is set up using [gallery link="file"] so that a Lightbox Gallery exists
     // $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();
