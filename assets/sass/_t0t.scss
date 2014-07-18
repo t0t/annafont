@@ -178,6 +178,33 @@ body {
 	@extend %text-center;
 	@include padding-bottom();
 }
+
+// galleries
+ul {
+	line-height : $baselineheight / 1.7;
+	@extend %text-center;
+	&.gallery {
+		list-style: none;
+		@include padding(0);
+		li {
+			@include rejilla(3);
+			@include padding(4%);
+			@media (max-width: $bp3) {
+				@include rejilla(1);
+			}
+			// background-color: white;
+			a {
+				@extend %clearfix;
+			}
+			img {
+				padding-bottom: $paddingbase / 1.5;
+				@include vendor( border-radius, 90px);
+			}
+			height: 250px;
+		}
+	}
+}
+
 .box--1 {
 	@include rejilla(1);
 	@include padding-bottom();
