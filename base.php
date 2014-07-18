@@ -31,10 +31,10 @@
           </aside><!-- /.sidebar -->
         <?php endif; ?>
       </div><!-- /.content -->
-      <?php edit_post_link(); ?>
+      
     </div><!-- /.wrap -->
   
-    <?php get_template_part('templates/footer'); ?></div>
+    <?php get_template_part('templates/footer'); ?><?php edit_post_link(); ?></div>
 
 </body>
 </html>

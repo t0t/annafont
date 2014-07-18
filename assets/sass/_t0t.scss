@@ -14,6 +14,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 	h1 {
 		@extend %hidden;
 	}
+	img {
+		margin-top: $paddingbase;
+	}
 }
 .home {
 	main {
@@ -165,6 +168,7 @@ body {
 .sidebar {
 	float: right;
 	@include max-width (25%);
+	@extend %text-center;
 	ul {
 		list-style: none;
 	}
@@ -178,7 +182,11 @@ body {
 	@extend %text-center;
 	@include padding-bottom();
 }
-
+.putfixed {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
 // galleries
 ul {
 	&.gallery {
@@ -232,7 +240,7 @@ ul {
 		select {
 			display: none;
 		}
-		@include padding();
+		@include padding(0);
 		//margin-top: 25px;
 		@extend %text-center;
 		@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes

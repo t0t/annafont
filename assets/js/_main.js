@@ -37,8 +37,6 @@ var Roots = {
       });
 
 
-      // Initialize the Lightbox for any links with the 'fancybox' class
-    // $(".thumbnail").fancybox();
 
 
     $("a[href$='.jpg'], a[href$='.jpeg']").attr('rel','gallery').fancybox({
@@ -49,39 +47,22 @@ var Roots = {
         this.title = alt;
     }
       
-
-
       });
  
-    // Initialize the Lightbox and add rel="gallery" to all gallery images when the gallery is set up using [gallery link="file"] so that a Lightbox Gallery exists
-    // $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();
- 
-    // Initalize the Lightbox for any links with the 'video' class and provide improved video embed support
-    // $(".video").fancybox({
-    //     maxWidth        : 800,
-    //     maxHeight       : 600,
-    //     fitToView       : false,
-    //     width           : '70%',
-    //     height          : '70%',
-    //     autoSize        : false,
-    //     closeClick      : false,
-    //     openEffect      : 'none',
-    //     closeEffect     : 'none'
-    // });
+    
 
-
-    // var go = true;
-    //       $(window).scroll(function() {
-    //         if ($(this).scrollTop() > 70 && go) {
-    //           $(".banner").css('height', '65px');
-    //           go = false;
-    //           $(".banner").addClass('navbar');
-    //         } else if ($(this).scrollTop() < 70 && !go) {
-    //           // $(".banner").css('height', '41px');
-    //           go = true;
-    //           $(".banner").removeClass('navbar');
-    //         }
-    //       });
+    var go = true;
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 150 && go) {
+              // $(".sidebar").css('height', '65px');
+              go = false;
+              $(".sidebar").addClass('putfixed');
+            } else if ($(this).scrollTop() < 150 && !go) {
+              // $(".banner").css('height', '41px');
+              go = true;
+              $(".sidebar").removeClass('putfixed');
+            }
+          });
 
 
 
