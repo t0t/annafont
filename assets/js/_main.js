@@ -39,9 +39,19 @@ var Roots = {
 
       // Initialize the Lightbox for any links with the 'fancybox' class
     // $(".thumbnail").fancybox();
- 
 
-    $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();
+
+    $("a[href$='.jpg'], a[href$='.jpeg']").attr('rel','gallery').fancybox({
+        
+        beforeShow : function() {
+        var alt = this.element.find('img').attr('alt');
+        this.inner.find('img').attr('alt', alt);
+        this.title = alt;
+    }
+      
+
+
+      });
  
     // Initialize the Lightbox and add rel="gallery" to all gallery images when the gallery is set up using [gallery link="file"] so that a Lightbox Gallery exists
     // $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox();

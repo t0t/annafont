@@ -1,0 +1,35 @@
+{
+    "key": "group_53c952326b6bf",
+    "title": "Gallery",
+    "fields": [
+        {
+            "key": "field_53c9523e16306",
+            "label": "image",
+            "name": "image",
+            "prefix": "",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "min": "",
+            "max": "",
+            "preview_size": "thumbnail",
+            "library": "all"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": ""
+}
