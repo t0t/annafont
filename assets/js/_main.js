@@ -50,7 +50,8 @@ var Roots = {
         openEffect  : 'elastic'
       }
     );
-    $("a[href$='.jpg'], a[href$='.png'], a[href$='.jpeg'], a[href$='.gif']").fancybox({
+
+    $(".gallery a[href$='.jpg'], .gallery a[href$='.png'], .gallery a[href$='.jpeg'], .gallery a[href$='.gif']").attr('rel','gallery').fancybox({
     beforeLoad : function() {
         // this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
         this.title = $(this.element).find('img').attr('alt');
