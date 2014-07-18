@@ -181,9 +181,9 @@ body {
 
 // galleries
 ul {
-	line-height : $baselineheight / 1.7;
-	@extend %text-center;
 	&.gallery {
+		line-height : $baselineheight / 1.7;
+		@extend %text-center;
 		list-style: none;
 		@include padding(0);
 		li {
