@@ -60,6 +60,8 @@ module.exports = function(grunt) {
       sass: {
         files: [
           'assets/sass/*.scss',
+          'assets/sass/lib/*.scss',
+          'assets/sass/componentes/*.scss',
           'assets/sass/mmenu/jquery.mmenu.all.scss',
           'assets/sass/mmenu/jquery.mmenu.oncanvas.scsss',
           'assets/sass/mmenu/inc/_*.scss'

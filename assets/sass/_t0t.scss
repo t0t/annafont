@@ -16,7 +16,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 	}
 	img {
 		margin-top: $paddingbase;
+		height: 100px;
 	}
+}
+h1, h2 {
+	@extend %text-center;
+	max-width: $bp3;
+	margin: 0 auto;
 }
 .home {
 	main {
@@ -43,7 +49,8 @@ body {
 	.sidebar {
 		background-size: contain;
 		background-repeat: repeat-x;
-		background-color:white;
+		border-left: $borde;
+		// @include vendor(border-radius,($radius/5));
 	}
 	background-attachment: fixed;
 	&.home { 
@@ -124,9 +131,16 @@ body {
 .sidebar {
 	float: right;
 	@include max-width (25%);
-	@extend %text-center;
+	// @extend %text-center;
 	ul {
 		list-style: none;
+		@extend %clearfix;
+	}
+	li {
+	float: left;
+			a {
+				@include padding($paddingbase/2.5);
+			}
 	}
 	@include padding();
 	@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
@@ -141,13 +155,12 @@ body {
 .putfixed {
 	position: fixed;
 	top: 0;
-	right: 0;
+	left: 72%;
 }
 // galleries
 ul {
 	&.gallery {
 		line-height : $baselineheight / 1.7;
-		@extend %text-center;
 		list-style: none;
 		@include padding(0);
 		li {
@@ -162,7 +175,7 @@ ul {
 			}
 			img {
 				padding-bottom: $paddingbase / 1.5;
-				@include vendor( border-radius, 90px);
+				@include vendor(border-radius,$radius);
 			}
 			height: 250px;
 		}
@@ -196,8 +209,8 @@ ul {
 		select {
 			display: none;
 		}
-		@include padding(0);
-		//margin-top: 25px;
+		// @include padding(0);
+		margin: 25px;
 		@extend %text-center;
 		@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
   		// @include max-width (100%);

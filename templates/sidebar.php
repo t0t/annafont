@@ -16,16 +16,18 @@
 
      <div id="social">
 		<h3>
-			<?php _e('Find me at:','annafont'); ?>
+			<?php //_e('Find me at:','annafont'); ?>
 		</h3>
 		<a href="https://www.facebook.com/Anna.Font.Artista" target="_blank" class="icon-facebook"> Facebook</a> | 
 		<a href="http://www.linkedin.com/pub/anna-font/35/bb/381" target="_blank" class="icon-linkedin"> Linkedin</a>
 	</div>
 	
+	<?php if(is_front_page()) {?>
 	<div class="idioma">
 	<h3></h3>
 		<?php do_action('icl_language_selector'); ?>
 	</div>
+	<?php } ?>
 	</div>
 	  
 	  <!-- https://www.facebook.com/anna.f.pelao -->
