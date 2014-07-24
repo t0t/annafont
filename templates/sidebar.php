@@ -23,9 +23,9 @@
 	</div>
 	
 	<div class="idioma">
-	<h3><?php //_e("<!--:es-->Seleccionar Idioma:<!--:--><!--:ca-->Sel&middot;leccionar Idioma:<!--:--><!--:en-->Select Language:<!--:-->"); ?></h3>
-	<?php do_action('icl_language_selector'); ?>
-	<?php //echo qtrans_generateLanguageSelectCode('both'); ?></div>
+	<h3></h3>
+		<?php do_action('icl_language_selector'); ?>
+	</div>
 	</div>
 	  
 	  <!-- https://www.facebook.com/anna.f.pelao -->

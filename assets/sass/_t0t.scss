@@ -43,97 +43,53 @@ body {
 	.sidebar {
 		background-size: contain;
 		background-repeat: repeat-x;
+		background-color:white;
 	}
 	background-attachment: fixed;
 	&.home { 
 		background-image: url(#{$image-path}/bg-home.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-home.png);
-		}
 	}
 	&.biografia { 
 		background-image: url(#{$image-path}/bg-biografia.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-biografia.png);
-		}
 	}
 	&.exposiciones, &.shows, &.exposicions { 
 		background-image: url(#{$image-path}/bg-exposiciones.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-exposiciones.png);
-		}
 	}
 	&.contacto, &.contacte, &.contact { 
 		background-image: url(#{$image-path}/bg-contacto.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-contacto.png);
-		}
 	}
 	&.barcelona { 
 		background-image: url(#{$image-path}/bg-barcelona.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-barcelona.png);
-		}
 	}
 	&.bodegones, &.bodegons, &.still-lifes { 
 		background-image: url(#{$image-path}/bg-bodegones.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-bodegones.png);
-		}
 	}
 	&.gaudi { 
 		background-image: url(#{$image-path}/bg-gaudi.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-gaudi.png);
-		}
 	}
 	&.gerona, &.girona { 
 		background-image: url(#{$image-path}/bg-gerona.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-gerona.png);
-		}
 	}
 	&.naturaleza, &.naturalesa, &.nature { 
 		background-image: url(#{$image-path}/bg-naturaleza.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-naturaleza.png);
-		}
 	}
 	&.tortella { 
 		background-image: url(#{$image-path}/bg-tortella.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-tortella.png);
-		}
 	}
 	&.tutis { 
 		background-image: url(#{$image-path}/bg-tutis.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-tutis.png);
-		}
 	}
 	&.rostros, &.faces, &.cares { 
 		background-image: url(#{$image-path}/bg-rostros.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-home.png);
-		}
 	}
 	&.dibujos, &.dibuixos, &.drawings { 
 		background-image: url(#{$image-path}/bg-dibujos.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-dibujos.png);
-		}
 	}
 	&.estampados, &.estampats, &.painting-designs { 
 		background-image: url(#{$image-path}/bg-estampados.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-estampados.png);
-		}
 	}
 	&.ilustraciones, &.illustration, &.il-lustracions { 
 		background-image: url(#{$image-path}/bg-ilustraciones.jpg); 
-		.sidebar {
-			background-image: url(#{$image-path}/bg-ilustraciones.png);
-		}
 	}
 }
 .container {
