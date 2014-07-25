@@ -23,6 +23,7 @@ h1, h2 {
 	@extend %text-center;
 	max-width: $bp3;
 	margin: 0 auto;
+	color: $grey;
 }
 .home {
 	main {
@@ -103,8 +104,8 @@ body {
 	@include max-width ($bp1);
 	@extend %clearfix;
 	@media (max-width: 1220px) { //padding horizontal en resoluciones decrecientes
-  		@include padding();
-  		padding-top: 75px;
+  		// @include padding();
+  		// padding-top: 75px;
   	}
 
 }
@@ -138,9 +139,10 @@ body {
 	}
 	li {
 	float: left;
-			a {
-				@include padding($paddingbase/2.5);
-			}
+		a {
+			@include padding($paddingbase/2.5);
+			color: $grey;
+		}
 	}
 	@include padding();
 	@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
