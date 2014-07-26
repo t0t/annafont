@@ -9,8 +9,8 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
-        '!assets/js/scripts.min.js',
-        '!assets/js/plugins/jquery.mmenu.min.all.js'
+        '!assets/js/scripts.min.js'
+        // '!assets/js/plugins/jquery.mmenu.min.all.js'
       ]
     },
     sass: {
@@ -61,10 +61,10 @@ module.exports = function(grunt) {
         files: [
           'assets/sass/*.scss',
           'assets/sass/lib/*.scss',
-          'assets/sass/componentes/*.scss',
-          'assets/sass/mmenu/jquery.mmenu.all.scss',
-          'assets/sass/mmenu/jquery.mmenu.oncanvas.scsss',
-          'assets/sass/mmenu/inc/_*.scss'
+          'assets/sass/componentes/*.scss'
+          // 'assets/sass/mmenu/jquery.mmenu.all.scss',
+          // 'assets/sass/mmenu/jquery.mmenu.oncanvas.scsss',
+          // 'assets/sass/mmenu/inc/_*.scss'
           // 'assets/sass/bootstrap/*.scss'
         ],
         tasks: ['sass', 'version']

@@ -7,34 +7,33 @@
     </div>
   <![endif]-->
 
-  <div><!-- the wrapper para que funcione el responsive menu-->
-    <?php
-      do_action('get_header');
-      // Use Bootstrap's navbar if enabled in config.php
-      if (current_theme_supports('bootstrap-top-navbar')) {
-        get_template_part('templates/header-top-navbar');
-      } else {
-        get_template_part('templates/header');
-      }
-    ?>
-  
-    <div id="my-content" class="container" role="document">
-      <div class="content row">
-  
-        <main class="main <?php echo roots_main_class(); ?>" role="main">
-          <?php include roots_template_path(); ?>
-        </main><!-- /.main -->
-  
-        <?php if (roots_display_sidebar()) : ?>
-          <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-            <?php include roots_sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
-      </div><!-- /.content -->
+  <div id="site-wrapper"><!-- the wrapper para que funcione el responsive menu-->
+    <div id="site-canvas">
+      <?php
+          do_action('get_header');
+          get_template_part('templates/header');
+        ?>
       
-    </div><!-- /.wrap -->
-  
-    <?php get_template_part('templates/footer'); ?><?php edit_post_link(); ?></div>
+        <div id="my-content" class="container" role="document">
+          <div class="content row">
+      
+            <main class="main <?php echo roots_main_class(); ?>" role="main">
+              <?php include roots_template_path(); ?>
+            </main><!-- /.main -->
+      
+            <?php if (roots_display_sidebar()) : ?>
+              <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+                <?php include roots_sidebar_path(); ?>
+              </aside><!-- /.sidebar -->
+            <?php endif; ?>
+          </div><!-- /.content -->
+          
+        </div><!-- /.wrap -->
+      
+        <?php get_template_part('templates/footer'); ?>
+        <?php edit_post_link(); ?>
+      </div> <!-- site canvas -->
+  </div><!-- site wrapper -->
 
 </body>
 </html>
