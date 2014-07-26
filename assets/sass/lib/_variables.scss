@@ -84,7 +84,7 @@ $textcolor-strong	:	$black;
 $borde: 1px dashed $color-base;
 
 // Links  //////////////////////
-$linkcolor 		: darken($color-cuatro,50%);
+$linkcolor 		: lighten($color-base,50%);
 $linkcolorhover 	: lighten($linkcolor, 10%);
 $linkcolorvisited   : $linkcolor;
 $linkcolorfocus 	: $linkcolorvisited;
