@@ -29,10 +29,18 @@ var Roots = {
 
 
 
+//cierra menu con tecla ESC
+$(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+        if ($('#site-wrapper').hasClass('show-nav')) {
+            // Assuming you used the function I made from the demo
+            toggleNav();
+        }
+    }
+});
 
-/*
-* Uses jQuery!!!!111one
-*/
+//TODO: Enable Fast Click for Mobile 
+//https://github.com/ftlabs/fastclick
 
 
 /*====================================
@@ -46,7 +54,6 @@ $(function() {
         toggleNav();
     });
 
-  
 });
 
 

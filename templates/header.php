@@ -40,6 +40,4 @@
 	<?php } ?>
 </div>
 
-
-
- <a href="#" class="toggle-nav btn btn-lg btn-success" id="big-sexy"><i class="fa fa-bars"></i> Toggle Nav</a>
+<a href="#" class="toggle-nav btn"><i class="icon-collapse"></i> Menu</a>

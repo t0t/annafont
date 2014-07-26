@@ -238,8 +238,7 @@ p {
 
 // menu off canvas
 /*
-* Uses Font Awesome and Bootstrap 3
-* Both aren't required for this demo
+* http://codepen.io/ncerminara/pen/quJpi
 */
 #site-wrapper {
   position: relative;
@@ -251,18 +250,18 @@ p {
   height: 100%;
   position: relative;
   
-  @include translateX(0);
-  @include translate3d(0,0,0);
+  @include translateX(0); //fallback
+  @include translate3d(0,0,0); //improve performance
   
   @include transition(300ms);
 
-  @include vendor( backface-visibility, hidden );
+  @include vendor( backface-visibility, hidden ); //http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms
  
 }
 
 .show-nav #site-canvas {
-  @include translateX(300px);
-  @include translate3d(300px,0,0);
+  @include translateX(-300px); //fallback
+  @include translate3d(-300px,0,0);//improve performance
 }
 
 #site-menu {
@@ -270,7 +269,12 @@ p {
   height: 100%;
   position: absolute;
   top: 0;
-  left: -300px;
-  background: #428bca;
-  padding: 15px;
+  right: -300px;
+  background: $color-base;
+  padding: $paddingbase;
+}
+.toggle-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
 }
