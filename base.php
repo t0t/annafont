@@ -14,10 +14,15 @@
           get_template_part('templates/header');
         ?>
       
-        <div id="my-content" class="container" role="document">
-          <div class="content row">
+        <div class="container" role="document">
+          <div class="content">
       
-            <main class="main <?php echo roots_main_class(); ?>" role="main">
+            <?php if ( is_page_template( 'template-page2.php' ) ) { ?>
+              <main class="main-estrecho <?php echo roots_main_class(); ?>" role="main">
+            <? } else { ?>
+              <main class="main <?php echo roots_main_class(); ?>" role="main">
+            <? } ?>
+
               <?php include roots_template_path(); ?>
             </main><!-- /.main -->
       

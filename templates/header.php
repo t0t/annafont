@@ -1,6 +1,6 @@
 <header class="banner container" role="banner">
 
-	<a href="#" class="toggle-nav btn">
+	<a href="#" class="toggle-nav btn btn--slidemenu">
 		<i class="icon-collapse"> Menu</i>
 	</a>
 

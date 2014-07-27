@@ -73,7 +73,6 @@ function toggleNav() {
 }
 
 
-
     $("a[href$='.jpg'], a[href$='.jpeg']").attr('rel','gallery').fancybox({
         
         beforeShow : function() {

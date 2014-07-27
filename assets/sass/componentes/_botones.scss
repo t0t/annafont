@@ -13,13 +13,13 @@
 .btn {
 	display : inline-block;
 	line-height : $baselineheight * 1.5;
-	color : $textcolor;
+	// color : $textcolor;
 	text-align : center;
 	vertical-align : middle;
 	font-size: 100%;
 	letter-spacing: $baseletterspacing;
 	white-space:nowrap;
-	background-color : $color-cuatro;
+	// background-color : $color-cuatro;
 	border : none;
 	// font-weight: bold;
 	cursor : pointer;
@@ -29,7 +29,6 @@
    	padding-right:1em;
    	padding-left: 1em;
 	// border-radius: $radius;
-	@include transition(.2s);
 
 	/**
  	* Nadie quiere un botón con texto subrayado cuando
@@ -45,7 +44,6 @@
 		outline:none;
     }
     &:visited {
-		color : $textcolor;
 	}
 }
 
@@ -77,17 +75,17 @@ input[type="submit"].btn:hover {
 
 // Botón desplegable
 .btn--slidemenu {
-	@include square(50px);
-		border-radius 		: $radius;
-		color 			: rgba(0,0,0,0.3);
-		background-color 	: $color-base-invert;
+	// @include square(50px);
+		// border-radius 		: $radius;
+		color 			: $grey;
+		// background-color 	: $color-base-invert;
 	
-	&:hover {
-		color 			: $color-base-invert;
-		background-color	: $color-base;
+	&:hover, &:focus {
+		color 			: $darkergrey;
+		// background-color	: $color-base;
 	}
 	&:visited {
-		color 			: $color-base;
+		color 			: $grey;
 	}
 }
 
