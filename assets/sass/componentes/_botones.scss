@@ -88,6 +88,9 @@ input[type="submit"].btn:hover {
 		color 			: $grey;
 	}
 }
+.btn--desplegable {
+	color: $color-base-invert;
+}
 
 /**
 * Botón de Info

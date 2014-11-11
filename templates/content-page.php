@@ -4,8 +4,6 @@
 
 	<?php //echo do_shortcode('[gallery link="file" columns="3"]'); ?>
 	
-
-
 	<!-- pintame la galeria con acf -->
 <?php 
  
@@ -14,7 +12,7 @@ $images = get_field('image');
 if( $images ): ?>
     <ul class="gallery">
         <?php foreach( $images as $image ): ?>
-            <li>
+            <li class="gallery__item">
             	<a href="<?php echo $image['url']; ?>">
             		<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>"/>
             	</a>
@@ -23,9 +21,6 @@ if( $images ): ?>
         <?php endforeach; ?>
     </ul>
 <?php endif; ?>
-
-
-
 
 	<?php the_content(); ?>
 
