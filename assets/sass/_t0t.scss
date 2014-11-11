@@ -6,7 +6,9 @@
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
-
+img, p img {
+		margin-right: $gutterwidth * 1.8;
+  	}
 /*------------------------------------*\
     $SITIO 
 \*------------------------------------*/
@@ -18,6 +20,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 		margin-top: $paddingbase;
 		height: 100px;
 	}
+}
+.page-header {
+	@include margin-bottom($paddingbase*2);
 }
 h1, h2 {
 	@extend %text-center;
@@ -35,10 +40,8 @@ h1, h2 {
 
 }
 nav {
-	&.nav-main {
-		a {
-			color: $color-cinco;
-		}
+	li {
+		color: $color-cinco;
 	}
 	.active {
 		text-decoration: underline;
@@ -47,6 +50,7 @@ nav {
 body {
 	font-family: $basefont;
 	color: $color-base;
+	box-shadow: inset 0 0 100px rgba(0,0,0,.2);
 	.sidebar {
 		background-size: contain;
 		background-repeat: repeat-x;
@@ -110,13 +114,25 @@ body {
 
 }
 .main {
-	float: left;
-	@include max-width (70%);
+	// float: left;
 	@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
-  		@include max-width (100%);
+  		@include max-width (90%);
+  		p {
+  			max-width: 75%;
+  		}
   	}
-  	img, p img {
-		margin-right: $gutterwidth * 1.8;
+  	p {
+  		max-width: 50%;
+  	}
+  	
+}
+.main-estrecho {
+	@include max-width (50%);
+	@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
+  		@include max-width (85%);
+  		p {
+  			max-width: 95%;
+  		}
   	}
 }
 #my-button, .idioma-mobiles {
@@ -152,7 +168,7 @@ body {
 }
 .footer {
 	@extend %text-center;
-	@include padding-bottom();
+	margin: ($paddingbase*2) 0
 }
 .putfixed {
 	position: fixed;
@@ -166,20 +182,54 @@ ul {
 		list-style: none;
 		@include padding(0);
 		li {
+			height: 250px;
+
 			@include rejilla(3);
 			@include padding(4%);
+			@extend %text-center;
 			@media (max-width: $bp3) {
 				@include rejilla(1);
 			}
-			// background-color: white;
+
 			a {
 				@extend %clearfix;
 			}
+
 			img {
 				padding-bottom: $paddingbase / 1.5;
+				margin-right: 0;
 				@include vendor(border-radius,$radius);
 			}
-			height: 250px;
+		}
+	}
+}
+
+.gallery__item {
+	position: relative;
+    
+	a {
+		display: block;
+		color: white;
+		@include transition(.2s);
+
+	    &::after {
+			@include transition(.2s);
+			content: "+" !important;
+			position: absolute;
+			@include translate(190px, -50px);
+	        font-size: 24px;
+			width: 2em;
+			height: 2em;
+			background-color: rgba(0,0,0,.1);
+			line-height: 2em;
+	        text-align: center;
+	        @include vendor(border-radius,$radius);
+		}
+		
+		&:hover::after {
+			content: ">" !important;
+			@include translate(195px, -54px);
+			background-color: $color-base;
 		}
 	}
 }
@@ -208,12 +258,10 @@ ul {
 		@extend %text-center;
 	}
 	.banner {
-		select {
-			display: none;
-		}
+		@include margin-bottom($paddingbase * 2);
 		// @include padding(0);
-		margin: 25px;
-		@extend %text-center;
+		// margin: 25px;
+		// @extend %text-center;
 		@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
   		// @include max-width (100%);
   		select {
@@ -234,3 +282,53 @@ p {
     position: fixed;
     z-index: 9999;
 }
+
+
+// menu off canvas
+/*
+* http://codepen.io/ncerminara/pen/quJpi
+*/
+#site-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+#site-canvas {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  @include translateX(0); //fallback
+  @include translate3d(0,0,0); //improve performance
+  @include transition(300ms);
+  @include vendor( backface-visibility, hidden ); //http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms
+}
+
+.show-nav #site-canvas {
+  @include translateX(-300px); //fallback
+  @include translate3d(-300px,0,0);//improve performance
+}
+
+#site-menu {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -300px;
+  background: $color-base;
+  padding: $paddingbase;
+  li {
+  	// @extend %text-center;
+  	list-style: none;
+  }
+}
+
+.toggle-nav {
+	position: absolute;
+	right: 7%;
+	top: $paddingbase * 2;
+	// background: $color-base-invert;
+	@media (max-width: $bp3) {
+		right: 0;
+	}
+}
+
