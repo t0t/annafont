@@ -6,3 +6,4 @@ client_inputs
 assets/css/main.min.css.map
 assets/bower_components
 assets/bower_components/*
+*.sql.gz

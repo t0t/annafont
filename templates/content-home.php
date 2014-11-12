@@ -10,6 +10,7 @@ $loop1 = new WP_Query(
         // 'category_name' => 'energyfruits', 
         // 'post__not_in' => array ($post->ID), 
         // 'orderby' => 'date',
+        // 'post_type' => array( 'post', 'page', 'movie' ),
         'order' => 'desc'
         // 'posts_per_page' => 20,
         )
