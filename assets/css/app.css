@@ -86,7 +86,7 @@ h1, h2, .footer, ul.gallery li, .intro-anim {
 * Clear floats.
 * http://bit.ly/1e3YaBH
 */
-.container:after, .sidebar ul:after, ul.gallery li a:after, .clearfix:after {
+.container:after, .sidebar ul:after, ul.gallery:after, ul.gallery li a:after, .clearfix:after {
   content: "";
   display: table;
   clear: both; }
@@ -856,10 +856,10 @@ ul.gallery {
   list-style: none;
   padding: 0; }
   ul.gallery li {
+    height: 250px;
     width: 31.3333333333%;
     float: left;
-    padding: 4%;
-    height: 250px; }
+    padding: 4%; }
     ul.gallery li:nth-child(n) {
       margin-bottom: 3%;
       margin-right: 3%; }
@@ -878,11 +878,49 @@ ul.gallery {
           margin-bottom: 0; } }
     ul.gallery li img {
       padding-bottom: 13.3333333333px;
+      margin-right: 0;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
       border-radius: 50%; }
+
+.gallery__item {
+  position: relative; }
+  .gallery__item a {
+    display: block;
+    color: white;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s; }
+    .gallery__item a::after {
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      transition: all 0.2s;
+      content: "+" !important;
+      position: absolute;
+      -webkit-transform: translate(190px, -50px);
+      -ms-transform: translate(190px, -50px);
+      transform: translate(190px, -50px);
+      font-size: 24px;
+      width: 2em;
+      height: 2em;
+      background-color: rgba(0, 0, 0, 0.1);
+      line-height: 2em;
+      text-align: center;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+    .gallery__item a:hover::after {
+      content: ">" !important;
+      -webkit-transform: translate(195px, -54px);
+      -ms-transform: translate(195px, -54px);
+      transform: translate(195px, -54px);
+      background-color: #2b00aa; }
 
 .box--1 {
   width: 100%;

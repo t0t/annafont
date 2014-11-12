@@ -135,6 +135,12 @@ body {
   		}
   	}
 }
+
+// Idioma
+.idioma {
+
+}
+
 #my-button, .idioma-mobiles {
 	@media (min-width: $bp3) { //padding horizontal en resoluciones decrecientes
   		// @include max-width (100%);
@@ -180,6 +186,7 @@ ul {
 	&.gallery {
 		line-height : $baselineheight / 1.7;
 		list-style: none;
+		@extend %clearfix;
 		@include padding(0);
 		li {
 			height: 250px;

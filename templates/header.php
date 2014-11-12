@@ -33,10 +33,4 @@
 		</ul>
 	</nav>
 	
-	<?php if(is_front_page()) {?>
-	<div class="idioma">
-	<h3></h3>
-		<?php do_action('icl_language_selector'); ?>
-	</div>
-	<?php } ?>
 </div>
