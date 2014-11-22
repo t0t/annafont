@@ -887,14 +887,15 @@ ul.gallery {
 
 .gallery__item {
   position: relative; }
-  .gallery__item a {
+  .gallery__item > a {
     display: block;
     color: white;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
-    transition: all 0.2s; }
-    .gallery__item a::after {
+    transition: all 0.2s;
+    background-color: red; }
+    .gallery__item > a::after {
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
       -ms-transition: all 0.2s;
@@ -915,7 +916,7 @@ ul.gallery {
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
       border-radius: 50%; }
-    .gallery__item a:hover::after {
+    .gallery__item > a:hover::after {
       content: ">" !important;
       -webkit-transform: translate(195px, -54px);
       -ms-transform: translate(195px, -54px);

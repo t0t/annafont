@@ -139,6 +139,24 @@ body {
 // Idioma
 .idioma {
 
+	div {
+		text-align: center;
+	}
+
+	#lang_sel li {
+		float: none;
+	}
+	#lang_sel a, #lang_sel a:visited {
+		border: none;
+		background: transparent;
+	}
+}
+@media all and (min-width: $bp3) {
+	.idioma {
+		position: absolute;
+		top: 100px;
+		right: 35px;
+	}
 }
 
 #my-button, .idioma-mobiles {
@@ -214,7 +232,7 @@ ul {
 .gallery__item {
 	position: relative;
     
-	a {
+	> a {
 		display: block;
 		color: white;
 		@include transition(.2s);

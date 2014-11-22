@@ -9,6 +9,13 @@
   		<img src="<? bloginfo('template_directory'); ?>/assets/img/logo.png" alt="">
 	</a>
 
+	<?php if(is_front_page()) {?>
+	<!-- Idiomas -->
+	<aside class="idioma">
+		<?php do_action('icl_language_selector'); ?>
+	</aside>
+<?php } ?>
+
 </header>
 
 <div id="site-menu">

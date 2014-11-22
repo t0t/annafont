@@ -31,15 +31,3 @@ $loop1 = new WP_Query(
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 </ul>
-
-
-
-
-
-<?php if(is_front_page()) {?>
-	<!-- Idiomas -->
-	<aside class="idioma">
-	<h3>Idioma</h3>
-		<?php do_action('icl_language_selector'); ?>
-	</aside>
-<?php } ?>
