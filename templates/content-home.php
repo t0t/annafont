@@ -2,14 +2,15 @@
 <h2><?php the_field('sub_heading'); ?></h2>
 
 <?php 
-$exclude_ids = array( 859, 850, 842, 789, 384, 132, 4 );
+$exclude_ids = array( 842, 859, 850, 4, 132, 857, 848, 840, 823, 815, 836, 855, 844, 822, 814 );
 $loop1 = new WP_Query( 
     array( 
         'post_type' => 'page',
+        //'post__in' => $include_ids, 
         'post__not_in' => $exclude_ids, 
         // 'category_name' => 'energyfruits', 
         // 'post__not_in' => array ($post->ID), 
-        // 'orderby' => 'date',
+        'orderby' => 'name',
         // 'post_type' => array( 'post', 'page', 'movie' ),
         'order' => 'desc'
         // 'posts_per_page' => 20,
