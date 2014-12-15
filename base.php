@@ -16,8 +16,7 @@
       
         <div class="container" role="document">
           <div class="content">
-      
-            <?php if ( is_page_template( 'template-page2.php' ) ) { ?>
+            <?php if ( is_page( array( 836, 822, 844, 850, 842, 4, 848, 840, 823 ) ) ) { ?>
               <main class="main-estrecho <?php echo roots_main_class(); ?>" role="main">
             <? } else { ?>
               <main class="main <?php echo roots_main_class(); ?>" role="main">
